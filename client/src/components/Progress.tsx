@@ -35,7 +35,7 @@ function CircularProgressWithLabel(
 }
 
 const Progress = () => {
-const [progress, setProgress] = React.useState(10);
+
   const [collected, setCollected] = useState(0);
   useEffect(() => {
     axios
@@ -66,11 +66,11 @@ const [progress, setProgress] = React.useState(10);
     >
 
       <Paper elevation={8} sx={{ display: 'flex', alignItems: 'center',  padding: '1rem', backgroundColor: "cadetblue", }}>
-         <Paper elevation={8} sx={{padding: "1rem",  backgroundColor: "cadetblue", color: "white"}}>
+         <Paper elevation={8} sx={{padding: "10px",  backgroundColor: "cadetblue", color: "white" ,fontSize: '13px'}}>
             مدفوع: {collected} ج.م
          </Paper>
         <CircularProgressWithLabel value={(collected / 70000) * 100} sx={{margin: "auto 5px", }}/>
-            <Paper elevation={8} sx={{padding: "1rem",  backgroundColor: "cadetblue", color: "white"}}>
+            <Paper elevation={8} sx={{padding: "10px",  backgroundColor: "cadetblue", color: "white", fontSize: '13px'}}>
             مستهدف: 70,000 ج.م
          </Paper>
       </Paper>
